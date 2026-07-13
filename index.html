@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>생일축하합니다</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="boom" preload="auto"></audio>
+    <audio id="huh" preload="auto"></audio>
+    <audio id="tuco" preload="auto"></audio>
+    <audio id="bgm" preload="auto" loop></audio>
+
+    <section class="start" id="start">
+      <button type="button" class="btn start-btn" id="btn-hello">안녕하세요...</button>
+    </section>
+
+    <main class="screen" id="main" hidden>
+      <img class="photo" src="assets/images/cat1.svg" alt="생일자" />
+      <p class="question">생일축하합니다: 생일자 본인이 맞습니까?</p>
+      <div class="actions">
+        <button type="button" class="btn" id="btn-yes">예!</button>
+        <button type="button" class="btn" id="btn-no">아뇨?</button>
+      </div>
+
+      <div class="modal" id="no-modal" hidden>
+        <div class="modal-box">
+          <img class="modal-photo" src="assets/images/cat2.svg" alt="" />
+          <p class="modal-text">왜 들어옴? 나가세요</p>
+        </div>
+      </div>
+
+      <div class="kick" id="kick" hidden>
+        <img class="feet" id="feet" src="assets/images/feet.svg" alt="" />
+        <span class="star star-1" id="star-1"></span>
+        <span class="star star-2" id="star-2"></span>
+        <button type="button" class="wait-btn" id="btn-wait" hidden>잠시만요 ㅠㅠ</button>
+      </div>
+    </main>
+
+    <section class="yes-scene" id="yes-scene" hidden>
+      <div class="fireworks" id="fireworks" aria-hidden="true"></div>
+      <img class="yes-photo" id="yes-photo" src="assets/images/image.png" alt="" />
+      <div class="usagi-layer" id="usagi-layer"></div>
+      <img class="wander" id="wander" src="assets/images/IMG_6639.JPG" alt="" hidden />
+      <div class="congrats" id="congrats" hidden>
+        <img class="congrats-photo" id="congrats-photo" src="assets/images/cat2.svg" alt="" />
+        <p class="congrats-text" id="congrats-text">여보 생일축하해 ㅎㅎ</p>
+      </div>
+      <img class="tear-bottom" id="tear-bottom" src="assets/images/image-copy-6.png" alt="" hidden />
+    </section>
+
+    <script src="js/default-config.js"></script>
+    <script src="js/config-io.js"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>
